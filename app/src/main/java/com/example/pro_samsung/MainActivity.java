@@ -30,12 +30,9 @@ public class MainActivity extends AppCompatActivity {
         e_school = findViewById(R.id.school);
         
         e_clas_s = findViewById(R.id.clas_s);
-        if(shared != null){
-            loadSettings();
-        }
-        if(shared == null){
-            Toast.makeText(this,"Ничего не сохранено",Toast.LENGTH_LONG).show();
-        }
+
+        loadSettings();
+
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,7 +53,10 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtra("clas_s",clas_s);
                     shared = getSharedPreferences("baseSettings",Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = shared.edit();
-                    editor.putString("value",name);
+                    editor.putString("name",name);
+                    editor.putString("second_name",second_name);
+                    editor.putString("school",school);
+                    editor.putString("clas_s",clas_s);
                     editor.apply();
                     startActivity(i);
                 }
@@ -77,8 +77,19 @@ public class MainActivity extends AppCompatActivity {
     }
     public void loadSettings() {
         shared = getSharedPreferences("baseSettings", Context.MODE_PRIVATE);
+        if(shared != null){
 
-            String value = shared.getString("value","");
-        Toast.makeText(this,"Hi, " + value,Toast.LENGTH_LONG).show();
+            e_name.setText(shared.getString("name",""));
+            e_second_name.setText(shared.getString("second_name",""));
+            e_school.setText(shared.getString("school",""));
+            e_clas_s.setText(shared.getString("clas_s",""));
+            if(!shared.getString("name", "").equals("")){
+                Toast.makeText(this, "Привет, "+shared.getString("name",""), Toast.LENGTH_LONG).show();
+            }
+
+        } else {
+            Toast.makeText(this,"Ничего не сохранено",Toast.LENGTH_LONG).show();
+        }
+
     }
 }
