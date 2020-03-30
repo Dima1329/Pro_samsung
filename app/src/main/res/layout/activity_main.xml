@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/Name" />
+        android:hint="@string/Name" />
 
     <EditText
         android:id="@+id/sec_name"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/Sec_name" />
+        android:hint="@string/Sec_name" />
 
 
     <EditText
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/School" />
+        android:hint="@string/School" />
 
     <EditText
         android:id="@+id/clas_s"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/Clas_s" />
+        android:hint="@string/Clas_s" />
 
     <Button
         android:id="@+id/var3"

@@ -7,7 +7,7 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="116dp" />
- 
+
     <TextView
         android:id="@+id/hi"
         android:layout_width="match_parent"
