@@ -56,20 +56,27 @@ public class TestActivity extends AppCompatActivity {
         var3.setOnClickListener(onClickListener3);
 
 
-        questions.add(new Question("2 * 2 =","6","4","2",2));
-        questions.add(new Question("12 / 2 =","2","12","6",3));
-        questions.add(new Question("7 - 5 =","7","2","12",2));
-        questions.add(new Question("2 + 2 =","2","0","4",3));
-        questions.add(new Question("Math.pow(4, 2) == 4","False","True","What?",1));
+        questions.add(new Question("2 * 2 =","6","4","2","4"));
+        questions.add(new Question("12 / 2 =","2","12","6","6"));
+        questions.add(new Question("7 - 5 =","7","2","12","2"));
+        questions.add(new Question("2 + 2 =","2","0","4","4"));
+        questions.add(new Question("Math.pow(4, 2) == 4","False","True","What?","False"));
+        questions.add(new Question("Math.pow(4, 2) == 16","False","True","What?","True"));
+        questions.add(new Question("34 / 2 =","17","10","20","17"));
         Collections.shuffle(questions);
-
+        List<Question> all_questions =new ArrayList<Question>(questions);
+        questions.clear();
+        for (int j = 0; j < num_of_ex; j++) {
+            questions.add(all_questions.get(j));
+        }
+        all_questions.clear();
         update_texts();
 
     }
     private final View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(1 == questions.get(i).getAnswer()){
+            if(var1.getText().toString().equals(questions.get(i).getAnswer())){
                 correct_answer_or_not[i] = 1;
             }
             if(i==num_of_ex-1){
@@ -85,7 +92,7 @@ public class TestActivity extends AppCompatActivity {
     private final View.OnClickListener onClickListener2 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(2 == questions.get(i).getAnswer()){
+            if(var2.getText().toString().equals(questions.get(i).getAnswer())){
                 correct_answer_or_not[i] = 1;
             }
             if(i==num_of_ex-1){
@@ -100,7 +107,7 @@ public class TestActivity extends AppCompatActivity {
     private final View.OnClickListener onClickListener3 = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if(3 == questions.get(i).getAnswer()){
+            if(var3.getText().toString().equals(questions.get(i).getAnswer())){
                 correct_answer_or_not[i] = 1;
             }
             if(i==num_of_ex-1){

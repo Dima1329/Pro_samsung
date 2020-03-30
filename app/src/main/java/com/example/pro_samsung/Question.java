@@ -5,7 +5,7 @@ public class Question {
     private String variant1;
     private String variant2;
     private String variant3;
-    private int answer;
+    private String answer;
 
     public String getQuestion() {
         return question;
@@ -23,11 +23,11 @@ public class Question {
         return variant3;
     }
 
-    public int getAnswer() {
+    public String  getAnswer() {
         return answer;
     }
 
-    public Question(String question, String variant1, String variant2, String variant3, int answer) {
+    public Question(String question, String variant1, String variant2, String variant3, String answer) {
         this.question = question;
         this.variant1 = variant1;
         this.variant2 = variant2;
