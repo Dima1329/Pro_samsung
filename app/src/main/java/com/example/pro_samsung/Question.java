@@ -1,37 +1,46 @@
 package com.example.pro_samsung;
 
-public class Question {
+class Question {
     private String question;
     private String variant1;
     private String variant2;
     private String variant3;
-    private String answer;
+    private String variant4;
 
-    public String getQuestion() {
+    private int answer;
+
+    String getQuestion() {
         return question;
     }
 
-    public String getVariant1() {
+    String getVariant1() {
         return variant1;
     }
 
-    public String getVariant2() {
+    String getVariant2() {
         return variant2;
     }
 
-    public String getVariant3() {
+    String getVariant3() {
         return variant3;
     }
 
-    public String  getAnswer() {
+    public String getVariant4() {
+        return variant4;
+    }
+
+    int getAnswer() {
         return answer;
     }
 
-    public Question(String question, String variant1, String variant2, String variant3, String answer) {
+
+
+    Question(String question, String variant1, String variant2, String variant3, String variant4, int answer) {
         this.question = question;
         this.variant1 = variant1;
         this.variant2 = variant2;
         this.variant3 = variant3;
+        this.variant4=variant4;
         this.answer = answer;
     }
 }

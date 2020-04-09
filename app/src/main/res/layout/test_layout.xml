@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
+    tools:conText=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,11 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15dp"
-            android:textColor="@color/colorPrimaryDark"/>
-
+            android:textColor="@color/colorPrimaryDark"
+        />
+ 
 
         <View
-            android:id="@+id/view2"
             android:layout_width="match_parent"
             android:layout_height="61dp" />
 
@@ -38,39 +38,110 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="57dp" />
+            android:layout_height="87dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/var1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/Text1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:textSize="30dp" />
     </LinearLayout>
 
 
-
-    <Button
-        android:id="@+id/var1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal" />
-    <View
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="68dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/var2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
-    <View
+        <Button
+            android:id="@+id/var2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/Text2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:textSize="30dp"
+           />
+
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="30dp" />
+        android:layout_height="70dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/var3"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
 
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
 
-    <Button
-        android:id="@+id/var3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/Text3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
 
+            android:textSize="30dp"
+            />
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/var4"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left" />
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/Text4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+
+            android:textSize="30dp"
+            />
+    </LinearLayout>
 
 
 

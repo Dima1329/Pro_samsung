@@ -43,10 +43,15 @@
 
     <Button
         android:id="@+id/var3"
+        style="@style/Widget.MaterialComponents.Button"
+        android:textColor="@color/colorAccent"
+        android:textSize="17dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/start" />
+        android:text="@string/start"
+
+        />
 
 
 
